@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="assignment2.sages.au.edu.utas.slistapp.addItem"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <TableRow>
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/quant"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
+
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/itemNameField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Item Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/itemQuantityField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/itemQuantityField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Quantity"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/itemCostField"
+        app:layout_constraintStart_toStartOf="@+id/itemNameField"
+        app:layout_constraintTop_toBottomOf="@+id/itemNameField" />
+
+    <EditText
+        android:id="@+id/itemCostField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:ems="10"
+        android:hint="Cost"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/itemPreview"
+        app:layout_constraintStart_toStartOf="@+id/itemQuantityField"
+        app:layout_constraintTop_toBottomOf="@+id/itemQuantityField" />
+
+    <EditText
+        android:id="@+id/itemPreview"
+        android:layout_width="213dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="19dp"
+        android:background="#C0C0C0"
+        android:ems="10"
+        android:hint=""
+        android:inputType="textMultiLine"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnPreviewItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCostField" />
+
+
+    <Button
+        android:id="@+id/btnConfirmItem"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginTop="20dp"
+        android:text="Confirm Item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnPreviewItem"
+        app:layout_constraintTop_toBottomOf="@+id/itemPreview" />
+        tools:layout_editor_absoluteY="197dp" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginStart="6dp"
+        android:background="#DCDCDC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/itemPreview2"
+        android:layout_width="212dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="41dp"
+        android:layout_marginTop="27dp"
+        android:background="#C0C0C0"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPreviewItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemPreview" />
+
+    <Button
+        android:id="@+id/btnPreviewItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="Preview"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/btnConfirmItem"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemPreview" />
+
+    <ListView
+        android:id="@+id/listView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#C0C0C0"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current List(tap to remove items)"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
+        app:layout_constraintStart_toStartOf="@+id/listView"
+        app:layout_constraintTop_toBottomOf="@+id/listView4" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginStart="6dp"
+        android:text="Add Item From Prefab List"
+        app:layout_constraintBottom_toTopOf="@+id/listView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPreviewItem" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+</android.support.constraint.ConstraintLayout>
